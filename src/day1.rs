@@ -1,9 +1,10 @@
 use std::fs;
 
 pub fn run() {
-    let input_file = fs::read_to_string("inputs/day1.txt").expect("Failed to read file");
+    let input = fs::read_to_string("inputs/day1.txt").expect("Failed to read file");
+    
     let mut data: Vec<i32> = Vec::new();
-    for line in input_file.lines() {
+    for line in input.lines() {
         data.push(line.parse::<i32>().expect("Failed to parse i32"));
     }
 
