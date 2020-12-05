@@ -1,12 +1,5 @@
 use std::fs;
 
-struct PasswordEntry {
-    lower: i32,
-    upper: i32,
-    letter: char,
-    password: Vec<char>
-}
-
 pub fn run() {
     let input = fs::read_to_string("inputs/day2.txt").expect("Failed to read file");
 
@@ -26,6 +19,13 @@ pub fn run() {
     
     part1(&password_db);
     part2(&password_db);
+}
+
+struct PasswordEntry {
+    lower: i32,
+    upper: i32,
+    letter: char,
+    password: Vec<char>
 }
 
 fn part1(entries: &[PasswordEntry]) {
